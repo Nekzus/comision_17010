@@ -1,0 +1,63 @@
+JSX : 
+
+const Componente = () => {}
+
+Componente({id:"componente"})   ===   <Componente id="componente" />
+Componente()   ===   <Componente></Componente>
+
+
+COMPONENTES : Son funciones , tienen que retornar algo y se tienen que llamar en mayuscula. Solo pueden retornar una sola cosa. Pueden recibir props(parametros) y siempre es un objeto. Los props son de solo lectura.
+
+
+
+const App = () => {
+    return <p>Hola mundo</p>
+}
+
+
+<App/>
+
+
+function foo(saludo){
+
+}
+
+foo("Hola")
+
+
+
+
+DESTRUCTURING : Es una forma de extraer valores de un objeto o un array.
+
+
+
+const arr = [1,2,3]
+
+const [uno,dos,tres] = arr
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+
+
+const obj = {x:1,y:2,z:3}
+
+const {x:x,y:y,z:z} = obj
+const {x,y,z} = obj
+
+const x = obj.x 
+const y = obj.y 
+const z = obj.z
+
+
+
+OBJECT SHORTHAND : Es una forma de crear un objeto mas rapido.
+
+const nombre = "Horacio"
+
+const persona = {
+    nombre : nombre
+}
+
+const persona = {nombre}
