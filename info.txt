@@ -6,7 +6,7 @@ Componente({id:"componente"})   ===   <Componente id="componente" />
 Componente()   ===   <Componente></Componente>
 
 
-COMPONENTES : Son funciones , tienen que retornar algo y se tienen que llamar en mayuscula. Solo pueden retornar una sola cosa. Pueden recibir props(parametros) y siempre es un objeto. Los props son de solo lectura.
+COMPONENTES : Son funciones , tienen que retornar algo y se tienen que llamar en mayuscula. Solo pueden retornar una sola cosa. Pueden recibir props(parametros) y siempre es un objeto. Los props son de solo lectura. Pueden tener un state, osea un valor interno que vaya a cambiar a traves del tiempo. Si el estado de un componente cambia, el componente se vuelve a renderizar.
 
 
 
@@ -61,3 +61,20 @@ const persona = {
 }
 
 const persona = {nombre}
+
+
+HOOKS : Es una funcion. Adaptan un componente a que tengan una funcionalidad que antes no tenian. Los hooks se ejecutan en el archivo donde los importas, siempre adentro de un componente y afuera de cualquier situacion condicional (o bucles)
+
+
+- useState : Es un hook de estado. Siempre retorna un array con dos valores. El primero es el valor del estado y el segundo es una funcion que se usa para cambiar el valor del estado.
+
+- useReducer
+- useRef
+
+- useEffect
+- useContext
+- useCallback
+- useMemo
+- useDebugValue
+- useImperativeHandle
+- useLayoutEffect
