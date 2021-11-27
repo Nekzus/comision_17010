@@ -6,7 +6,7 @@ Componente({id:"componente"})   ===   <Componente id="componente" />
 Componente()   ===   <Componente></Componente>
 
 
-COMPONENTES : Son funciones , tienen que retornar algo y se tienen que llamar en mayuscula. Solo pueden retornar una sola cosa. Pueden recibir props(parametros) y siempre es un objeto. Los props son de solo lectura. Pueden tener un state, osea un valor interno que vaya a cambiar a traves del tiempo. Si el estado de un componente cambia, el componente se vuelve a renderizar.
+COMPONENTES : Son funciones , tienen que retornar algo y se tienen que llamar en mayuscula. Solo pueden retornar una sola cosa. Pueden recibir props(parametros) y siempre es un objeto. Los props son de solo lectura. Pueden tener un state, osea un valor interno que vaya a cambiar a traves del tiempo. Si el estado de un componente cambia, el componente se vuelve a renderizar. Si los props cambian, el componente se vuelve a renderizar.
 
 
 
@@ -71,10 +71,17 @@ HOOKS : Es una funcion. Adaptan un componente a que tengan una funcionalidad que
 - useReducer
 - useRef
 
-- useEffect
+- useEffect : Es un hook que te permite ejecutar algo despues de que el componente se renderiza. (Te permite hacer un efecto secundario)
 - useContext
 - useCallback
 - useMemo
 - useDebugValue
 - useImperativeHandle
 - useLayoutEffect
+
+
+
+Promesas : Es un objeto que representa una operacion que dura en el tiempo y notifica cuando salio todo bien o mal. Tienen un estado que puede ser: pending, fulfilled(resolved), rejected.
+
+
+const promesa = new Promise((res,rej)=>{})
