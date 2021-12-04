@@ -1,8 +1,10 @@
+import {NavLink} from 'react-router-dom'
+
 const Nav = () => {
     return (
         <nav id="main-nav" className="nav">
-            <a href="#">link</a>
-            <a href="#">link</a>
+            <NavLink to="/categoria/electronics">electronics</NavLink>
+            <NavLink to="/categoria/jewelery">jewelery</NavLink>
         </nav>
     )
 }

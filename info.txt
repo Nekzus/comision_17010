@@ -85,3 +85,11 @@ Promesas : Es un objeto que representa una operacion que dura en el tiempo y not
 
 
 const promesa = new Promise((res,rej)=>{})
+
+
+
+
+- BrowserRouter : API History
+- HashRouter : API Location (hash)
+- MemoryRouter : Entornos no navegador
+- StaticRouter : SSR (Server Side Rendering)
