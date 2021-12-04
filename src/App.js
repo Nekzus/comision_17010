@@ -3,12 +3,12 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Main from "./Main"
 
-const productosIniciales = [
+/* const productosIniciales = [
     { id : 1, nombre : "Producto 1" },
     { id : 2, nombre : "Producto 2" },
     { id : 3, nombre : "Producto 3" },
     { id : 4, nombre : "Producto 4" }
-]
+] */
 
 
 const App = () => {
@@ -30,7 +30,12 @@ const App = () => {
 
     useEffect(() => {
 
-        const promesa = new Promise((res, rej) => {
+        //1) Arranca la primera vez el componente sin datos (estado inicial)
+        //2) Hago el primer render
+        //3) Hago un efecto
+        //4) Hago una peticion ajax
+
+        /* const promesa = new Promise((res, rej) => {
 
             setTimeout(() => {
                 //console.log("Aca pido un array de productos a una DB")
@@ -54,7 +59,7 @@ const App = () => {
             .catch(() => {
                 //console.log("Salio todo mal")
                 setMensaje("Todo salio Mal")
-            })
+            }) */
 
         //promesa.finally()
 
