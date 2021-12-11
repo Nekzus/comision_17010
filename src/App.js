@@ -3,6 +3,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Main from "./Main"
 import { BrowserRouter } from "react-router-dom"
+import TestEventos from "./TestEventos"
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header producto={producto} saludo={saludo} />
+            <TestEventos/>
             <Main/>
             <Footer saludo={saludo} />
         </BrowserRouter>

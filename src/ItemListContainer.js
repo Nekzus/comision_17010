@@ -2,17 +2,13 @@ import { useEffect, useState } from "react"
 import { NavLink, useParams } from "react-router-dom"
 
 
-
-
 const ItemListContainer = (prop) => {
 
     const [items, setItems] = useState([])
-    const resultado = useParams() 
-
-    console.log("Recargo el componente")
+    const {id} = useParams() 
     
     useEffect(() => {
-        console.log("ReEvaluo el pedido")
+        
         if(!id){
             fetch('https://fakestoreapi.com/products')
                 .then(res => res.json())
@@ -27,7 +23,6 @@ const ItemListContainer = (prop) => {
                 .then(json => {
                     setItems(json)
                 })
-                
         }
 
     }, [id])
