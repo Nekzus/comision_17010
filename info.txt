@@ -93,3 +93,10 @@ const promesa = new Promise((res,rej)=>{})
 - HashRouter : API Location (hash)
 - MemoryRouter : Entornos no navegador
 - StaticRouter : SSR (Server Side Rendering)
+
+
+
+Pub/Sub
+
+Context API 
+Redux 

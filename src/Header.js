@@ -2,7 +2,7 @@ import CartWidget from "./CartWidget";
 import Nav from "./Nav"
 import { NavLink } from "react-router-dom";
 
-const Header = ({ producto, saludo }) => {
+const Header = ({ saludo }) => {
     return (
         <header id="main-header">
             
