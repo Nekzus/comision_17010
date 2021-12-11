@@ -7,7 +7,7 @@ import { NavLink, useParams } from "react-router-dom"
 const ItemListContainer = (prop) => {
 
     const [items, setItems] = useState([])
-    const { id } = useParams()
+    const resultado = useParams() 
 
     console.log("Recargo el componente")
     
