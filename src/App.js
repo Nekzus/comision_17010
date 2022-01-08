@@ -13,7 +13,7 @@ const App = () => {
         <BrowserRouter>
             <CustomProvider>
                 <Header saludo={saludo} />
-                <TestEventos/>
+                {/* <TestEventos/> */}
                 <Main/>
                 <Footer saludo={saludo} />
             </CustomProvider>

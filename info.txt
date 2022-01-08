@@ -100,3 +100,42 @@ Pub/Sub
 
 Context API 
 Redux 
+
+
+
+
+
+new Promise((res,rej)=>{
+
+})
+
+promesa 
+
+promesa.then().catch()
+
+
+
+//ASYNC / AWAIT
+
+
+async function traerUsuarios(){
+
+    try {
+        const resultado = await fetch("http://jsonplaceholder.typicode.com/users")
+        const usuarios = await resultado.json()
+    }catch(e){
+
+    }
+    
+}
+
+
+
+const resultado = traerUsuarios()
+
+
+
+
+const obj = {}
+obj.x = true
+obj["x"] = true
