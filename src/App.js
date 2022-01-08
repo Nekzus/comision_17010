@@ -2,7 +2,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import Main from "./Main"
 import { BrowserRouter } from "react-router-dom"
-import TestEventos from "./TestEventos"
+//import TestEventos from "./TestEventos"
 import CustomProvider from "./CustomProvider"
 
 const App = () => {

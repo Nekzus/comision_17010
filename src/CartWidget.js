@@ -1,11 +1,11 @@
-import { useContext } from "react"
-import { context } from "./CustomProvider"
+//import { useContext } from "react"
+//import { context } from "./CustomProvider"
 
 const CartWidget = () => {
 
-    const resultado = useContext(context)
+    //const resultado = useContext(context)
 
-    console.log(resultado)
+    //console.log(resultado)
 
     return (
         <div>

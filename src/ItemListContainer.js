@@ -1,4 +1,4 @@
-import { collection , getDocs } from "firebase/firestore"
+import { collection , getDocs, query, where } from "firebase/firestore"
 import { useEffect, useState } from "react"
 import { NavLink, useParams } from "react-router-dom"
 import { db } from "./firebase"
@@ -16,40 +16,74 @@ const ItemListContainer = (prop) => {
     const [items, setItems] = useState([])
     const {id} = useParams() 
 
+    //console.log(id)
+
+    const formatearYSetear = (arrayDeDocumentos) => {
+        setItems(arrayDeDocumentos.map(documento=>{
+            return {...documento.data(), id: documento.id}
+        }))
+    }
 
 
     const traerProductos = async () => {
 
         const productosCollection = collection(db, "productos")
         const consulta = await getDocs(productosCollection)
+        formatearYSetear(consulta.docs)
 
-        const docs_ref = consulta.docs
+
+        /* const docs_ref = consulta.docs
 
         const formated = docs_ref.map(documento=>{
-            //const producto = document.data()
-            //producto.id = documento.id
+            const producto = document.data()
+            producto.id = documento.id
 
-            //const producto = {...documento.data(), id: documento.id}
-            //return producto
+            const producto = {...documento.data(), id: documento.id}
+            return producto
 
             return {...documento.data(), id: documento.id}
         })
 
-        setItems(formated)
+        setItems(formated) */
 
         /* consulta.forEach(documento=>{
             console.log(documento)
         }) */
 
-
     }
 
     
+
+    const traerProductosPorCategoria = async () => {
+        const productosCollection = collection(db, "productos")
+        const constraint1 = where("categoria","==",id)
+        const constraint2 = where("precio",">",100)
+        const customQuery = query(productosCollection,constraint1,constraint2)
+        const consulta = await getDocs(customQuery)
+        formatearYSetear(consulta.docs)
+
+        /* const docs_ref = consulta.docs
+
+        const formated = docs_ref.map(documento=>{
+            return {...documento.data(), id: documento.id}
+        })
+
+        setItems(formated) */
+    }
+
     useEffect(() => {
         
-       traerProductos()
+        if(id){
+            traerProductosPorCategoria()
+        }else{
+            traerProductos()
+        }
 
     }, [id])
+
+
+
+
 
 
     if (items.length === 0) {
@@ -64,7 +98,7 @@ const ItemListContainer = (prop) => {
                 {prop.greeting}
                 <ul>
                     {items.map(item => (
-                        <li key={item.id}>{item.titulo} <NavLink to={`/item/${item.id}`}>ver detalle</NavLink> </li>
+                        <li key={item.id}>{item.titulo} - ${item.precio} <NavLink to={`/item/${item.id}`}>ver detalle</NavLink> </li>
                     ))}
                 </ul>
             </div>
